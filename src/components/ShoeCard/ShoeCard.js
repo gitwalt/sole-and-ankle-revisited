@@ -128,4 +128,6 @@ const NewFlag = styled(Flag)`
   background-color: ${COLORS.secondary};
 `;
 
+
+
 export default ShoeCard;
