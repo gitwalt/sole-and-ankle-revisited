@@ -26,6 +26,7 @@ const Header = () => {
 					<NavLink href="/women">Women</NavLink>
 					<NavLink href="/kids">Kids</NavLink>
 					<NavLink href="/collections">Collections</NavLink>
+					<NavLink href="/collections">Collections</NavLink>
 				</DesktopNav>
 				<MobileActions>
 					<ShoppingBagButton>
@@ -56,8 +57,9 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
+  /*height: 72px;*/
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow: auto;
   
   @media ${QUERIES.tabletAndDown} {
 	justify-content: space-between;
@@ -68,7 +70,7 @@ const MainHeader = styled.div`
 
 const DesktopNav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1.5rem, 9.2vw - 4.5rem, 5rem);
   margin: 0 48px;
   
   @media ${QUERIES.tabletAndDown} {
@@ -103,7 +105,7 @@ const ShoppingBagButton = styled(UnstyledButton)`
 `;
 
 const Filler = styled.div`
-flex: 1;
+  flex: 1;
   @media ${QUERIES.tabletAndDown} {
 	display: none;
   }
