@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import {COLORS, WEIGHTS, QUERIES} from '../../constants';
+import {WEIGHTS, QUERIES} from '../../constants';
 import Logo from '../Logo';
 import Icon from '../Icon';
 import SuperHeader from '../SuperHeader';
@@ -25,7 +25,6 @@ const Header = () => {
 					<NavLink href="/men">Men</NavLink>
 					<NavLink href="/women">Women</NavLink>
 					<NavLink href="/kids">Kids</NavLink>
-					<NavLink href="/collections">Collections</NavLink>
 					<NavLink href="/collections">Collections</NavLink>
 				</DesktopNav>
 				<MobileActions>
@@ -57,14 +56,13 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  /*height: 72px;*/
-  border-bottom: 1px solid ${COLORS.gray[300]};
-  overflow: auto;
+  border-bottom: 1px solid var(--color-gray-300);
   
-  @media ${QUERIES.tabletAndDown} {
+  @media  screen and ${QUERIES.tabletAndDown} {
+	overflow: auto;
 	justify-content: space-between;
 	align-items: center;
-	border-top: 4px solid ${COLORS.gray[900]};
+	border-bottom: 1px solid var(--color-gray-900);
   };
 `;
 
@@ -95,7 +93,7 @@ const MobileActions = styled.div`
 
 const LogoWrapper = styled.div`
   flex: 1;
-  @media ${QUERIES.tabletAndDown} {
+  @media screen and ${QUERIES.tabletAndDown} {
 	flex: revert;
   }
 `;
@@ -106,7 +104,7 @@ const ShoppingBagButton = styled(UnstyledButton)`
 
 const Filler = styled.div`
   flex: 1;
-  @media ${QUERIES.tabletAndDown} {
+  @media screen and ${QUERIES.tabletAndDown} {
 	display: none;
   }
 `;
@@ -116,15 +114,13 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${
-	  COLORS.gray[900]
-  };
+  color: var(--color-gray-900);
   font-weight: ${
 	  WEIGHTS.medium
   };
   
   &:first-of-type {
-	color: ${COLORS.secondary};
+	color: var(--color-secondary);
   }
 `;
 
