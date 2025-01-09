@@ -37,11 +37,8 @@ const MobileMenu = ({isOpen, onDismiss}) => {
 
 const Overlay = styled(DialogOverlay)`
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--color-transparent-backdrop);
+  inset: 0;
+  background: var(--color-backdrop);
   display: flex;
   justify-content: flex-end;
 `;
