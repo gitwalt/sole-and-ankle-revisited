@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import {DialogOverlay, DialogContent} from '@reach/dialog';
 import {WEIGHTS} from '../../constants';
 

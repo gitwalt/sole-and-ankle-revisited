@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 const VisuallyHidden = ({ children, ...delegated }) => {
   const [forceShow, setForceShow] = React.useState(false);

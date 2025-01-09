@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 import { WEIGHTS } from '../../constants';
 import { formatPrice, pluralize, isNewShoe } from '../../utils';
@@ -96,8 +96,8 @@ const Name = styled.h3`
 `;
 
 const Price = styled.span`
-  color: var(--color);
-  text-decoration: var(--text-decoration);
+  color: var(--color-gray-900);
+  text-decoration: none;
 `;
 
 const ColorInfo = styled.p`
