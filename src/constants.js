@@ -8,7 +8,7 @@ export const COLORS = {
 		900: '220deg 3% 20%',
 	},
 	primary: '340deg 65% 47%',
-	secondary: '240deg 60% 63%'
+	secondary: '240deg 60% 63%',
 };
 
 export const WEIGHTS = {
